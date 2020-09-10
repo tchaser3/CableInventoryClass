@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A107C51F-56AA-4053-A186-AA511375C03A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CableInventoryDLL</RootNamespace>
+    <AssemblyName>CableInventoryDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CableHandCoilDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CableHandCoilDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CableInventoryClass.cs" />
+    <Compile Include="CableReelIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CableReelIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CableReelInventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CableReelInventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CableReturnedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CableReturnedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CableTotalInventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CableTotalInventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CableWIPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CableWIPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableHandCoilByCoilReelIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableHandCoilByCoilReelIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableHandCoilByDataEntryDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableHandCoilByDataEntryDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableHandCoilByPartWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableHandCoilByPartWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableHandCoilByWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableHandCoilByWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableReelIDByTransactionDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableReelIDByTransactionDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableReelInventoryByPartReelWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableReelInventoryByPartReelWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableReelInventoryByPartWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableReelInventoryByPartWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableReelInventoryByWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableReelInventoryByWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableReturnedByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableReturnedByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableReturnedByReelIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableReturnedByReelIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableReturnedByTransactionDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableReturnedByTransactionDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableTotalInventoryByPartWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableTotalInventoryByPartWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableTotalInventoryByWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableTotalInventoryByWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableTotalInventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableTotalInventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableWIPByCreateDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableWIPByCreateDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableWIPByPartWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableWIPByPartWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCableWIPByWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableWIPByWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProjectCableUsageByProjectPartWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProjectCableUsageByProjectPartWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProjectCableUsageByWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProjectCableUsageByWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProjectCableUsageForProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProjectCableUsageForProjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProjectCableUsageTotalsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProjectCableUsageTotalsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCableHandCoilEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertCableHandCoilEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCableReelIDEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertCableReelIDEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCableReelInventoryEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertCableReelInventoryEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCableTotalInventoryEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertCableTotalInventoryEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCableWIPEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertCableWIPEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProjectCableUsageEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProjectCableUsageEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertReceiveCableEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertReceiveCableEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertReturnedCableEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertReturnedCableEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectCableUsageDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectCableUsageDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiveCableDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiveCableDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveCableHandCoilEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveCableHandCoilEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCableHandCoilFootageEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCableHandCoilFootageEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCableReelInventoryFootageEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCableReelInventoryFootageEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCableTotalInventoryFootageEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCableTotalInventoryFootageEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCableWIPFootage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCableWIPFootage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProjectCableUsageFootageEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProjectCableUsageFootageEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateReceivedCableFootageEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateReceivedCableFootageEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CableHandCoilDataSet.xsc">
+      <DependentUpon>CableHandCoilDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableHandCoilDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CableHandCoilDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CableHandCoilDataSet.xss">
+      <DependentUpon>CableHandCoilDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableReelIDDataSet.xsc">
+      <DependentUpon>CableReelIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableReelIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CableReelIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CableReelIDDataSet.xss">
+      <DependentUpon>CableReelIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableReelInventoryDataSet.xsc">
+      <DependentUpon>CableReelInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableReelInventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CableReelInventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CableReelInventoryDataSet.xss">
+      <DependentUpon>CableReelInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableReturnedDataSet.xsc">
+      <DependentUpon>CableReturnedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableReturnedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CableReturnedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CableReturnedDataSet.xss">
+      <DependentUpon>CableReturnedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableTotalInventoryDataSet.xsc">
+      <DependentUpon>CableTotalInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableTotalInventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CableTotalInventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CableTotalInventoryDataSet.xss">
+      <DependentUpon>CableTotalInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableWIPDataSet.xsc">
+      <DependentUpon>CableWIPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CableWIPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CableWIPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CableWIPDataSet.xss">
+      <DependentUpon>CableWIPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableHandCoilByCoilReelIDDataSet.xsc">
+      <DependentUpon>FindCableHandCoilByCoilReelIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableHandCoilByCoilReelIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableHandCoilByCoilReelIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableHandCoilByCoilReelIDDataSet.xss">
+      <DependentUpon>FindCableHandCoilByCoilReelIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableHandCoilByDataEntryDateDataSet.xsc">
+      <DependentUpon>FindCableHandCoilByDataEntryDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableHandCoilByDataEntryDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableHandCoilByDataEntryDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableHandCoilByDataEntryDateDataSet.xss">
+      <DependentUpon>FindCableHandCoilByDataEntryDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableHandCoilByPartWarehouseDataSet.xsc">
+      <DependentUpon>FindCableHandCoilByPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableHandCoilByPartWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableHandCoilByPartWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableHandCoilByPartWarehouseDataSet.xss">
+      <DependentUpon>FindCableHandCoilByPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableHandCoilByWarehouseDataSet.xsc">
+      <DependentUpon>FindCableHandCoilByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableHandCoilByWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableHandCoilByWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableHandCoilByWarehouseDataSet.xss">
+      <DependentUpon>FindCableHandCoilByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelIDByTransactionDateDataSet.xsc">
+      <DependentUpon>FindCableReelIDByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelIDByTransactionDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableReelIDByTransactionDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableReelIDByTransactionDateDataSet.xss">
+      <DependentUpon>FindCableReelIDByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelInventoryByPartReelWarehouseDataSet.xsc">
+      <DependentUpon>FindCableReelInventoryByPartReelWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelInventoryByPartReelWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableReelInventoryByPartReelWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableReelInventoryByPartReelWarehouseDataSet.xss">
+      <DependentUpon>FindCableReelInventoryByPartReelWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelInventoryByPartWarehouseDataSet.xsc">
+      <DependentUpon>FindCableReelInventoryByPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelInventoryByPartWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableReelInventoryByPartWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableReelInventoryByPartWarehouseDataSet.xss">
+      <DependentUpon>FindCableReelInventoryByPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelInventoryByWarehouseDataSet.xsc">
+      <DependentUpon>FindCableReelInventoryByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelInventoryByWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableReelInventoryByWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableReelInventoryByWarehouseDataSet.xss">
+      <DependentUpon>FindCableReelInventoryByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReturnedByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindCableReturnedByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReturnedByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableReturnedByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableReturnedByEmployeeIDDataSet.xss">
+      <DependentUpon>FindCableReturnedByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReturnedByReelIDDataSet.xsc">
+      <DependentUpon>FindCableReturnedByReelIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReturnedByReelIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableReturnedByReelIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableReturnedByReelIDDataSet.xss">
+      <DependentUpon>FindCableReturnedByReelIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReturnedByTransactionDateDataSet.xsc">
+      <DependentUpon>FindCableReturnedByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReturnedByTransactionDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableReturnedByTransactionDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableReturnedByTransactionDateDataSet.xss">
+      <DependentUpon>FindCableReturnedByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableTotalInventoryByPartWarehouseDataSet.xsc">
+      <DependentUpon>FindCableTotalInventoryByPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableTotalInventoryByPartWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableTotalInventoryByPartWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableTotalInventoryByPartWarehouseDataSet.xss">
+      <DependentUpon>FindCableTotalInventoryByPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableTotalInventoryByWarehouseDataSet.xsc">
+      <DependentUpon>FindCableTotalInventoryByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableTotalInventoryByWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableTotalInventoryByWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableTotalInventoryByWarehouseDataSet.xss">
+      <DependentUpon>FindCableTotalInventoryByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableTotalInventoryDataSet.xsc">
+      <DependentUpon>FindCableTotalInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableTotalInventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableTotalInventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableTotalInventoryDataSet.xss">
+      <DependentUpon>FindCableTotalInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableWIPByCreateDateDataSet.xsc">
+      <DependentUpon>FindCableWIPByCreateDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableWIPByCreateDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableWIPByCreateDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableWIPByCreateDateDataSet.xss">
+      <DependentUpon>FindCableWIPByCreateDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableWIPByPartWarehouseDataSet.xsc">
+      <DependentUpon>FindCableWIPByPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableWIPByPartWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableWIPByPartWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableWIPByPartWarehouseDataSet.xss">
+      <DependentUpon>FindCableWIPByPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableWIPByWarehouseDataSet.xsc">
+      <DependentUpon>FindCableWIPByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableWIPByWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableWIPByWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableWIPByWarehouseDataSet.xss">
+      <DependentUpon>FindCableWIPByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectCableUsageByProjectPartWarehouseDataSet.xsc">
+      <DependentUpon>FindProjectCableUsageByProjectPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectCableUsageByProjectPartWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProjectCableUsageByProjectPartWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProjectCableUsageByProjectPartWarehouseDataSet.xss">
+      <DependentUpon>FindProjectCableUsageByProjectPartWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectCableUsageByWarehouseDataSet.xsc">
+      <DependentUpon>FindProjectCableUsageByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectCableUsageByWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProjectCableUsageByWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProjectCableUsageByWarehouseDataSet.xss">
+      <DependentUpon>FindProjectCableUsageByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectCableUsageForProjectDataSet.xsc">
+      <DependentUpon>FindProjectCableUsageForProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectCableUsageForProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProjectCableUsageForProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProjectCableUsageForProjectDataSet.xss">
+      <DependentUpon>FindProjectCableUsageForProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectCableUsageTotalsDataSet.xsc">
+      <DependentUpon>FindProjectCableUsageTotalsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectCableUsageTotalsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProjectCableUsageTotalsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProjectCableUsageTotalsDataSet.xss">
+      <DependentUpon>FindProjectCableUsageTotalsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableHandCoilEntry.xsc">
+      <DependentUpon>InsertCableHandCoilEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableHandCoilEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertCableHandCoilEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertCableHandCoilEntry.xss">
+      <DependentUpon>InsertCableHandCoilEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableReelIDEntry.xsc">
+      <DependentUpon>InsertCableReelIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableReelIDEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertCableReelIDEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertCableReelIDEntry.xss">
+      <DependentUpon>InsertCableReelIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableReelInventoryEntry.xsc">
+      <DependentUpon>InsertCableReelInventoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableReelInventoryEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertCableReelInventoryEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertCableReelInventoryEntry.xss">
+      <DependentUpon>InsertCableReelInventoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableTotalInventoryEntry.xsc">
+      <DependentUpon>InsertCableTotalInventoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableTotalInventoryEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertCableTotalInventoryEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertCableTotalInventoryEntry.xss">
+      <DependentUpon>InsertCableTotalInventoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableWIPEntry.xsc">
+      <DependentUpon>InsertCableWIPEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCableWIPEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertCableWIPEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertCableWIPEntry.xss">
+      <DependentUpon>InsertCableWIPEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProjectCableUsageEntry.xsc">
+      <DependentUpon>InsertProjectCableUsageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProjectCableUsageEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProjectCableUsageEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProjectCableUsageEntry.xss">
+      <DependentUpon>InsertProjectCableUsageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertReceiveCableEntry.xsc">
+      <DependentUpon>InsertReceiveCableEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertReceiveCableEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertReceiveCableEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertReceiveCableEntry.xss">
+      <DependentUpon>InsertReceiveCableEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertReturnedCableEntry.xsc">
+      <DependentUpon>InsertReturnedCableEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertReturnedCableEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertReturnedCableEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertReturnedCableEntry.xss">
+      <DependentUpon>InsertReturnedCableEntry.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectCableUsageDataSet.xsc">
+      <DependentUpon>ProjectCableUsageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectCableUsageDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectCableUsageDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectCableUsageDataSet.xss">
+      <DependentUpon>ProjectCableUsageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReceiveCableDataSet.xsc">
+      <DependentUpon>ReceiveCableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReceiveCableDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReceiveCableDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReceiveCableDataSet.xss">
+      <DependentUpon>ReceiveCableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveCableHandCoilEntry.xsc">
+      <DependentUpon>RemoveCableHandCoilEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveCableHandCoilEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveCableHandCoilEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveCableHandCoilEntry.xss">
+      <DependentUpon>RemoveCableHandCoilEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableHandCoilFootageEntry.xsc">
+      <DependentUpon>UpdateCableHandCoilFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableHandCoilFootageEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCableHandCoilFootageEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCableHandCoilFootageEntry.xss">
+      <DependentUpon>UpdateCableHandCoilFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableReelInventoryFootageEntry.xsc">
+      <DependentUpon>UpdateCableReelInventoryFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableReelInventoryFootageEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCableReelInventoryFootageEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCableReelInventoryFootageEntry.xss">
+      <DependentUpon>UpdateCableReelInventoryFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableTotalInventoryFootageEntry.xsc">
+      <DependentUpon>UpdateCableTotalInventoryFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableTotalInventoryFootageEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCableTotalInventoryFootageEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCableTotalInventoryFootageEntry.xss">
+      <DependentUpon>UpdateCableTotalInventoryFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableWIPFootage.xsc">
+      <DependentUpon>UpdateCableWIPFootage.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableWIPFootage.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCableWIPFootage.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCableWIPFootage.xss">
+      <DependentUpon>UpdateCableWIPFootage.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProjectCableUsageFootageEntry.xsc">
+      <DependentUpon>UpdateProjectCableUsageFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProjectCableUsageFootageEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProjectCableUsageFootageEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProjectCableUsageFootageEntry.xss">
+      <DependentUpon>UpdateProjectCableUsageFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateReceivedCableFootageEntry.xsc">
+      <DependentUpon>UpdateReceivedCableFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateReceivedCableFootageEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateReceivedCableFootageEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateReceivedCableFootageEntry.xss">
+      <DependentUpon>UpdateReceivedCableFootageEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
