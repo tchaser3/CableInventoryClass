@@ -135,7 +135,44 @@ namespace CableInventoryDLL
 
         UpdateReceivedCableFootageEntryTableAdapters.QueriesTableAdapter aUpdateReceivedCableFootageTableAdapter;
 
+        UpdateCableReelIDEntryTableAdapters.QueriesTableAdapter aUpdateCableReelIDTableAdapter;
 
+        FindCableReelIDByAssignedCableIDDataSet aFindCableReelIDByAssignedCableReelIDDataSet;
+        FindCableReelIDByAssignedCableIDDataSetTableAdapters.FindCableReelIDByAssignedCableReelIDTableAdapter aFindCableReelIDByAssignedCableReelIDTableAdapter;
+
+        public FindCableReelIDByAssignedCableIDDataSet FindCableReelIDByAssignedCableReelID(string strAssignedCableReelID)
+        {
+            try
+            {
+                aFindCableReelIDByAssignedCableReelIDDataSet = new FindCableReelIDByAssignedCableIDDataSet();
+                aFindCableReelIDByAssignedCableReelIDTableAdapter = new FindCableReelIDByAssignedCableIDDataSetTableAdapters.FindCableReelIDByAssignedCableReelIDTableAdapter();
+                aFindCableReelIDByAssignedCableReelIDTableAdapter.Fill(aFindCableReelIDByAssignedCableReelIDDataSet.FindCableReelIDByAssignedCableReelID, strAssignedCableReelID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Find Cable Reel ID By Assigned Cable ID " + Ex.Message);
+            }
+
+            return aFindCableReelIDByAssignedCableReelIDDataSet;
+        }
+        public bool UpdateCableAssignedReelID(int intCableReelID, string strAssignedCableReelID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateCableReelIDTableAdapter = new UpdateCableReelIDEntryTableAdapters.QueriesTableAdapter();
+                aUpdateCableReelIDTableAdapter.UpdateCableReelID(intCableReelID, strAssignedCableReelID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Cable Inventory Class // Update Assigned Cable Reel ID " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
         public bool UpdateReceivedCableFootage(int intTransactionID, int intReelFootage)
         {
             bool blnFatalError = false;
@@ -214,14 +251,14 @@ namespace CableInventoryDLL
 
             return aFindCableReelIDByTransactionDateDataSet;
         }
-        public bool InsertCableReelID(DateTime datTransactionDate, int intPartID, int intEmployeeID)
+        public bool InsertCableReelID(DateTime datTransactionDate, int intPartID, int intEmployeeID, String strAssignedCableReelID)
         {
             bool blnFatalError = false;
 
             try
             {
                 aInsertCableReelIDTableAdapter = new InsertCableReelIDEntryTableAdapters.QueriesTableAdapter();
-                aInsertCableReelIDTableAdapter.InsertCableReelID(datTransactionDate, intPartID, intEmployeeID);
+                aInsertCableReelIDTableAdapter.InsertCableReelID(datTransactionDate, intPartID, intEmployeeID, strAssignedCableReelID);
             }
             catch (Exception Ex)
             {

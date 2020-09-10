@@ -95,6 +95,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindCableHandCoilByWarehouseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindCableReelIDByAssignedCableIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCableReelIDByAssignedCableIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindCableReelIDByTransactionDateDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -246,6 +251,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateCableHandCoilFootageEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateCableReelIDEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCableReelIDEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateCableReelInventoryFootageEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -383,6 +393,17 @@
     </None>
     <None Include="FindCableHandCoilByWarehouseDataSet.xss">
       <DependentUpon>FindCableHandCoilByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelIDByAssignedCableIDDataSet.xsc">
+      <DependentUpon>FindCableReelIDByAssignedCableIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCableReelIDByAssignedCableIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCableReelIDByAssignedCableIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCableReelIDByAssignedCableIDDataSet.xss">
+      <DependentUpon>FindCableReelIDByAssignedCableIDDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindCableReelIDByTransactionDateDataSet.xsc">
       <DependentUpon>FindCableReelIDByTransactionDateDataSet.xsd</DependentUpon>
@@ -706,6 +727,17 @@
     </None>
     <None Include="UpdateCableHandCoilFootageEntry.xss">
       <DependentUpon>UpdateCableHandCoilFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableReelIDEntry.xsc">
+      <DependentUpon>UpdateCableReelIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCableReelIDEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCableReelIDEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCableReelIDEntry.xss">
+      <DependentUpon>UpdateCableReelIDEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateCableReelInventoryFootageEntry.xsc">
       <DependentUpon>UpdateCableReelInventoryFootageEntry.xsd</DependentUpon>

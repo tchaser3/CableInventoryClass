@@ -20,17 +20,17 @@ namespace CableInventoryDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CableReelIDDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindCableReelIDByAssignedCableIDDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CableReelIDDataSet : global::System.Data.DataSet {
+    public partial class FindCableReelIDByAssignedCableIDDataSet : global::System.Data.DataSet {
         
-        private cablereelidDataTable tablecablereelid;
+        private FindCableReelIDByAssignedCableReelIDDataTable tableFindCableReelIDByAssignedCableReelID;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CableReelIDDataSet() {
+        public FindCableReelIDByAssignedCableIDDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace CableInventoryDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected CableReelIDDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindCableReelIDByAssignedCableIDDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace CableInventoryDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["cablereelid"] != null)) {
-                    base.Tables.Add(new cablereelidDataTable(ds.Tables["cablereelid"]));
+                if ((ds.Tables["FindCableReelIDByAssignedCableReelID"] != null)) {
+                    base.Tables.Add(new FindCableReelIDByAssignedCableReelIDDataTable(ds.Tables["FindCableReelIDByAssignedCableReelID"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace CableInventoryDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public cablereelidDataTable cablereelid {
+        public FindCableReelIDByAssignedCableReelIDDataTable FindCableReelIDByAssignedCableReelID {
             get {
-                return this.tablecablereelid;
+                return this.tableFindCableReelIDByAssignedCableReelID;
             }
         }
         
@@ -127,7 +127,7 @@ namespace CableInventoryDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CableReelIDDataSet cln = ((CableReelIDDataSet)(base.Clone()));
+            FindCableReelIDByAssignedCableIDDataSet cln = ((FindCableReelIDByAssignedCableIDDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace CableInventoryDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["cablereelid"] != null)) {
-                    base.Tables.Add(new cablereelidDataTable(ds.Tables["cablereelid"]));
+                if ((ds.Tables["FindCableReelIDByAssignedCableReelID"] != null)) {
+                    base.Tables.Add(new FindCableReelIDByAssignedCableReelIDDataTable(ds.Tables["FindCableReelIDByAssignedCableReelID"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace CableInventoryDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablecablereelid = ((cablereelidDataTable)(base.Tables["cablereelid"]));
+            this.tableFindCableReelIDByAssignedCableReelID = ((FindCableReelIDByAssignedCableReelIDDataTable)(base.Tables["FindCableReelIDByAssignedCableReelID"]));
             if ((initTable == true)) {
-                if ((this.tablecablereelid != null)) {
-                    this.tablecablereelid.InitVars();
+                if ((this.tableFindCableReelIDByAssignedCableReelID != null)) {
+                    this.tableFindCableReelIDByAssignedCableReelID.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace CableInventoryDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CableReelIDDataSet";
+            this.DataSetName = "FindCableReelIDByAssignedCableIDDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CableReelIDDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindCableReelIDByAssignedCableIDDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablecablereelid = new cablereelidDataTable();
-            base.Tables.Add(this.tablecablereelid);
+            this.tableFindCableReelIDByAssignedCableReelID = new FindCableReelIDByAssignedCableReelIDDataTable();
+            base.Tables.Add(this.tableFindCableReelIDByAssignedCableReelID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializecablereelid() {
+        private bool ShouldSerializeFindCableReelIDByAssignedCableReelID() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace CableInventoryDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CableReelIDDataSet ds = new CableReelIDDataSet();
+            FindCableReelIDByAssignedCableIDDataSet ds = new FindCableReelIDByAssignedCableIDDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace CableInventoryDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void cablereelidRowChangeEventHandler(object sender, cablereelidRowChangeEvent e);
+        public delegate void FindCableReelIDByAssignedCableReelIDRowChangeEventHandler(object sender, FindCableReelIDByAssignedCableReelIDRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class cablereelidDataTable : global::System.Data.TypedTableBase<cablereelidRow> {
+        public partial class FindCableReelIDByAssignedCableReelIDDataTable : global::System.Data.TypedTableBase<FindCableReelIDByAssignedCableReelIDRow> {
             
             private global::System.Data.DataColumn columnCableReelID;
             
@@ -291,8 +291,8 @@ namespace CableInventoryDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public cablereelidDataTable() {
-                this.TableName = "cablereelid";
+            public FindCableReelIDByAssignedCableReelIDDataTable() {
+                this.TableName = "FindCableReelIDByAssignedCableReelID";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace CableInventoryDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal cablereelidDataTable(global::System.Data.DataTable table) {
+            internal FindCableReelIDByAssignedCableReelIDDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +317,7 @@ namespace CableInventoryDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected cablereelidDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindCableReelIDByAssignedCableReelIDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -373,56 +373,56 @@ namespace CableInventoryDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public cablereelidRow this[int index] {
+            public FindCableReelIDByAssignedCableReelIDRow this[int index] {
                 get {
-                    return ((cablereelidRow)(this.Rows[index]));
+                    return ((FindCableReelIDByAssignedCableReelIDRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event cablereelidRowChangeEventHandler cablereelidRowChanging;
+            public event FindCableReelIDByAssignedCableReelIDRowChangeEventHandler FindCableReelIDByAssignedCableReelIDRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event cablereelidRowChangeEventHandler cablereelidRowChanged;
+            public event FindCableReelIDByAssignedCableReelIDRowChangeEventHandler FindCableReelIDByAssignedCableReelIDRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event cablereelidRowChangeEventHandler cablereelidRowDeleting;
+            public event FindCableReelIDByAssignedCableReelIDRowChangeEventHandler FindCableReelIDByAssignedCableReelIDRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event cablereelidRowChangeEventHandler cablereelidRowDeleted;
+            public event FindCableReelIDByAssignedCableReelIDRowChangeEventHandler FindCableReelIDByAssignedCableReelIDRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddcablereelidRow(cablereelidRow row) {
+            public void AddFindCableReelIDByAssignedCableReelIDRow(FindCableReelIDByAssignedCableReelIDRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public cablereelidRow AddcablereelidRow(System.DateTime TransactionDate, int PartID, int EmployeeID, string AssignedCableReelID) {
-                cablereelidRow rowcablereelidRow = ((cablereelidRow)(this.NewRow()));
+            public FindCableReelIDByAssignedCableReelIDRow AddFindCableReelIDByAssignedCableReelIDRow(System.DateTime TransactionDate, int PartID, int EmployeeID, string AssignedCableReelID) {
+                FindCableReelIDByAssignedCableReelIDRow rowFindCableReelIDByAssignedCableReelIDRow = ((FindCableReelIDByAssignedCableReelIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TransactionDate,
                         PartID,
                         EmployeeID,
                         AssignedCableReelID};
-                rowcablereelidRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowcablereelidRow);
-                return rowcablereelidRow;
+                rowFindCableReelIDByAssignedCableReelIDRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindCableReelIDByAssignedCableReelIDRow);
+                return rowFindCableReelIDByAssignedCableReelIDRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public cablereelidRow FindByCableReelID(int CableReelID) {
-                return ((cablereelidRow)(this.Rows.Find(new object[] {
+            public FindCableReelIDByAssignedCableReelIDRow FindByCableReelID(int CableReelID) {
+                return ((FindCableReelIDByAssignedCableReelIDRow)(this.Rows.Find(new object[] {
                             CableReelID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                cablereelidDataTable cln = ((cablereelidDataTable)(base.Clone()));
+                FindCableReelIDByAssignedCableReelIDDataTable cln = ((FindCableReelIDByAssignedCableReelIDDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,7 +430,7 @@ namespace CableInventoryDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new cablereelidDataTable();
+                return new FindCableReelIDByAssignedCableReelIDDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -459,8 +459,6 @@ namespace CableInventoryDLL {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCableReelID}, true));
                 this.columnCableReelID.AutoIncrement = true;
-                this.columnCableReelID.AutoIncrementSeed = -1;
-                this.columnCableReelID.AutoIncrementStep = -1;
                 this.columnCableReelID.AllowDBNull = false;
                 this.columnCableReelID.ReadOnly = true;
                 this.columnCableReelID.Unique = true;
@@ -473,28 +471,28 @@ namespace CableInventoryDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public cablereelidRow NewcablereelidRow() {
-                return ((cablereelidRow)(this.NewRow()));
+            public FindCableReelIDByAssignedCableReelIDRow NewFindCableReelIDByAssignedCableReelIDRow() {
+                return ((FindCableReelIDByAssignedCableReelIDRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new cablereelidRow(builder);
+                return new FindCableReelIDByAssignedCableReelIDRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(cablereelidRow);
+                return typeof(FindCableReelIDByAssignedCableReelIDRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.cablereelidRowChanged != null)) {
-                    this.cablereelidRowChanged(this, new cablereelidRowChangeEvent(((cablereelidRow)(e.Row)), e.Action));
+                if ((this.FindCableReelIDByAssignedCableReelIDRowChanged != null)) {
+                    this.FindCableReelIDByAssignedCableReelIDRowChanged(this, new FindCableReelIDByAssignedCableReelIDRowChangeEvent(((FindCableReelIDByAssignedCableReelIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -502,8 +500,8 @@ namespace CableInventoryDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.cablereelidRowChanging != null)) {
-                    this.cablereelidRowChanging(this, new cablereelidRowChangeEvent(((cablereelidRow)(e.Row)), e.Action));
+                if ((this.FindCableReelIDByAssignedCableReelIDRowChanging != null)) {
+                    this.FindCableReelIDByAssignedCableReelIDRowChanging(this, new FindCableReelIDByAssignedCableReelIDRowChangeEvent(((FindCableReelIDByAssignedCableReelIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -511,8 +509,8 @@ namespace CableInventoryDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.cablereelidRowDeleted != null)) {
-                    this.cablereelidRowDeleted(this, new cablereelidRowChangeEvent(((cablereelidRow)(e.Row)), e.Action));
+                if ((this.FindCableReelIDByAssignedCableReelIDRowDeleted != null)) {
+                    this.FindCableReelIDByAssignedCableReelIDRowDeleted(this, new FindCableReelIDByAssignedCableReelIDRowChangeEvent(((FindCableReelIDByAssignedCableReelIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -520,14 +518,14 @@ namespace CableInventoryDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.cablereelidRowDeleting != null)) {
-                    this.cablereelidRowDeleting(this, new cablereelidRowChangeEvent(((cablereelidRow)(e.Row)), e.Action));
+                if ((this.FindCableReelIDByAssignedCableReelIDRowDeleting != null)) {
+                    this.FindCableReelIDByAssignedCableReelIDRowDeleting(this, new FindCableReelIDByAssignedCableReelIDRowChangeEvent(((FindCableReelIDByAssignedCableReelIDRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovecablereelidRow(cablereelidRow row) {
+            public void RemoveFindCableReelIDByAssignedCableReelIDRow(FindCableReelIDByAssignedCableReelIDRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -536,7 +534,7 @@ namespace CableInventoryDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CableReelIDDataSet ds = new CableReelIDDataSet();
+                FindCableReelIDByAssignedCableIDDataSet ds = new FindCableReelIDByAssignedCableIDDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -554,7 +552,7 @@ namespace CableInventoryDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "cablereelidDataTable";
+                attribute2.FixedValue = "FindCableReelIDByAssignedCableReelIDDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -598,25 +596,25 @@ namespace CableInventoryDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class cablereelidRow : global::System.Data.DataRow {
+        public partial class FindCableReelIDByAssignedCableReelIDRow : global::System.Data.DataRow {
             
-            private cablereelidDataTable tablecablereelid;
+            private FindCableReelIDByAssignedCableReelIDDataTable tableFindCableReelIDByAssignedCableReelID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal cablereelidRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindCableReelIDByAssignedCableReelIDRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablecablereelid = ((cablereelidDataTable)(this.Table));
+                this.tableFindCableReelIDByAssignedCableReelID = ((FindCableReelIDByAssignedCableReelIDDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int CableReelID {
                 get {
-                    return ((int)(this[this.tablecablereelid.CableReelIDColumn]));
+                    return ((int)(this[this.tableFindCableReelIDByAssignedCableReelID.CableReelIDColumn]));
                 }
                 set {
-                    this[this.tablecablereelid.CableReelIDColumn] = value;
+                    this[this.tableFindCableReelIDByAssignedCableReelID.CableReelIDColumn] = value;
                 }
             }
             
@@ -624,10 +622,10 @@ namespace CableInventoryDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime TransactionDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tablecablereelid.TransactionDateColumn]));
+                    return ((global::System.DateTime)(this[this.tableFindCableReelIDByAssignedCableReelID.TransactionDateColumn]));
                 }
                 set {
-                    this[this.tablecablereelid.TransactionDateColumn] = value;
+                    this[this.tableFindCableReelIDByAssignedCableReelID.TransactionDateColumn] = value;
                 }
             }
             
@@ -635,10 +633,10 @@ namespace CableInventoryDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int PartID {
                 get {
-                    return ((int)(this[this.tablecablereelid.PartIDColumn]));
+                    return ((int)(this[this.tableFindCableReelIDByAssignedCableReelID.PartIDColumn]));
                 }
                 set {
-                    this[this.tablecablereelid.PartIDColumn] = value;
+                    this[this.tableFindCableReelIDByAssignedCableReelID.PartIDColumn] = value;
                 }
             }
             
@@ -646,10 +644,10 @@ namespace CableInventoryDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int EmployeeID {
                 get {
-                    return ((int)(this[this.tablecablereelid.EmployeeIDColumn]));
+                    return ((int)(this[this.tableFindCableReelIDByAssignedCableReelID.EmployeeIDColumn]));
                 }
                 set {
-                    this[this.tablecablereelid.EmployeeIDColumn] = value;
+                    this[this.tableFindCableReelIDByAssignedCableReelID.EmployeeIDColumn] = value;
                 }
             }
             
@@ -657,10 +655,10 @@ namespace CableInventoryDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string AssignedCableReelID {
                 get {
-                    return ((string)(this[this.tablecablereelid.AssignedCableReelIDColumn]));
+                    return ((string)(this[this.tableFindCableReelIDByAssignedCableReelID.AssignedCableReelIDColumn]));
                 }
                 set {
-                    this[this.tablecablereelid.AssignedCableReelIDColumn] = value;
+                    this[this.tableFindCableReelIDByAssignedCableReelID.AssignedCableReelIDColumn] = value;
                 }
             }
         }
@@ -669,22 +667,22 @@ namespace CableInventoryDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class cablereelidRowChangeEvent : global::System.EventArgs {
+        public class FindCableReelIDByAssignedCableReelIDRowChangeEvent : global::System.EventArgs {
             
-            private cablereelidRow eventRow;
+            private FindCableReelIDByAssignedCableReelIDRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public cablereelidRowChangeEvent(cablereelidRow row, global::System.Data.DataRowAction action) {
+            public FindCableReelIDByAssignedCableReelIDRowChangeEvent(FindCableReelIDByAssignedCableReelIDRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public cablereelidRow Row {
+            public FindCableReelIDByAssignedCableReelIDRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -700,7 +698,7 @@ namespace CableInventoryDLL {
         }
     }
 }
-namespace CableInventoryDLL.CableReelIDDataSetTableAdapters {
+namespace CableInventoryDLL.FindCableReelIDByAssignedCableIDDataSetTableAdapters {
     
     
     /// <summary>
@@ -712,7 +710,7 @@ namespace CableInventoryDLL.CableReelIDDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class cablereelidTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindCableReelIDByAssignedCableReelIDTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -726,7 +724,7 @@ namespace CableInventoryDLL.CableReelIDDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public cablereelidTableAdapter() {
+        public FindCableReelIDByAssignedCableReelIDTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -823,46 +821,13 @@ namespace CableInventoryDLL.CableReelIDDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "cablereelid";
+            tableMapping.DataSetTable = "FindCableReelIDByAssignedCableReelID";
             tableMapping.ColumnMappings.Add("CableReelID", "CableReelID");
             tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
             tableMapping.ColumnMappings.Add("PartID", "PartID");
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
             tableMapping.ColumnMappings.Add("AssignedCableReelID", "AssignedCableReelID");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [cablereelid] WHERE (([CableReelID] = @Original_CableReelID) AND ([Tr" +
-                "ansactionDate] = @Original_TransactionDate) AND ([PartID] = @Original_PartID) AN" +
-                "D ([EmployeeID] = @Original_EmployeeID))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CableReelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CableReelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransactionDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PartID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [cablereelid] ([TransactionDate], [PartID], [EmployeeID], [AssignedCableReelID]) VALUES (@TransactionDate, @PartID, @EmployeeID, @AssignedCableReelID);
-SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FROM cablereelid WHERE (CableReelID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransactionDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssignedCableReelID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssignedCableReelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [cablereelid] SET [TransactionDate] = @TransactionDate, [PartID] = @PartID, [EmployeeID] = @EmployeeID, [AssignedCableReelID] = @AssignedCableReelID WHERE (([CableReelID] = @Original_CableReelID) AND ([TransactionDate] = @Original_TransactionDate) AND ([PartID] = @Original_PartID) AND ([EmployeeID] = @Original_EmployeeID));
-SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FROM cablereelid WHERE (CableReelID = @CableReelID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransactionDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssignedCableReelID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssignedCableReelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CableReelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CableReelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransactionDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PartID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CableReelID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CableReelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -878,17 +843,24 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FROM" +
-                " cablereelid";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.FindCableReelIDByAssignedCableReelID";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssignedCableReelID", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CableReelIDDataSet.cablereelidDataTable dataTable) {
+        public virtual int Fill(FindCableReelIDByAssignedCableIDDataSet.FindCableReelIDByAssignedCableReelIDDataTable dataTable, string AssignedCableReelID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((AssignedCableReelID == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(AssignedCableReelID));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -900,138 +872,17 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CableReelIDDataSet.cablereelidDataTable GetData() {
+        public virtual FindCableReelIDByAssignedCableIDDataSet.FindCableReelIDByAssignedCableReelIDDataTable GetData(string AssignedCableReelID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CableReelIDDataSet.cablereelidDataTable dataTable = new CableReelIDDataSet.cablereelidDataTable();
+            if ((AssignedCableReelID == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(AssignedCableReelID));
+            }
+            FindCableReelIDByAssignedCableIDDataSet.FindCableReelIDByAssignedCableReelIDDataTable dataTable = new FindCableReelIDByAssignedCableIDDataSet.FindCableReelIDByAssignedCableReelIDDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CableReelIDDataSet.cablereelidDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CableReelIDDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "cablereelid");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CableReelID, System.DateTime Original_TransactionDate, int Original_PartID, int Original_EmployeeID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CableReelID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_TransactionDate));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_PartID));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_EmployeeID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime TransactionDate, int PartID, int EmployeeID, string AssignedCableReelID) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(TransactionDate));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(PartID));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(EmployeeID));
-            if ((AssignedCableReelID == null)) {
-                throw new global::System.ArgumentNullException("AssignedCableReelID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(AssignedCableReelID));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime TransactionDate, int PartID, int EmployeeID, string AssignedCableReelID, int Original_CableReelID, System.DateTime Original_TransactionDate, int Original_PartID, int Original_EmployeeID, int CableReelID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(TransactionDate));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(PartID));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(EmployeeID));
-            if ((AssignedCableReelID == null)) {
-                throw new global::System.ArgumentNullException("AssignedCableReelID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(AssignedCableReelID));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_CableReelID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_TransactionDate));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_PartID));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_EmployeeID));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(CableReelID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime TransactionDate, int PartID, int EmployeeID, string AssignedCableReelID, int Original_CableReelID, System.DateTime Original_TransactionDate, int Original_PartID, int Original_EmployeeID) {
-            return this.Update(TransactionDate, PartID, EmployeeID, AssignedCableReelID, Original_CableReelID, Original_TransactionDate, Original_PartID, Original_EmployeeID, Original_CableReelID);
         }
     }
     
@@ -1047,8 +898,6 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
         
         private UpdateOrderOption _updateOrder;
         
-        private cablereelidTableAdapter _cablereelidTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1061,20 +910,6 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public cablereelidTableAdapter cablereelidTableAdapter {
-            get {
-                return this._cablereelidTableAdapter;
-            }
-            set {
-                this._cablereelidTableAdapter = value;
             }
         }
         
@@ -1097,10 +932,6 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._cablereelidTableAdapter != null) 
-                            && (this._cablereelidTableAdapter.Connection != null))) {
-                    return this._cablereelidTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1114,9 +945,6 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._cablereelidTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1126,17 +954,8 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(CableReelIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindCableReelIDByAssignedCableIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._cablereelidTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.cablereelid.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cablereelidTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1145,16 +964,8 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(CableReelIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindCableReelIDByAssignedCableIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._cablereelidTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.cablereelid.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cablereelidTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1163,16 +974,8 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(CableReelIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindCableReelIDByAssignedCableIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._cablereelidTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.cablereelid.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cablereelidTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1205,17 +1008,12 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(CableReelIDDataSet dataSet) {
+        public virtual int UpdateAll(FindCableReelIDByAssignedCableIDDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._cablereelidTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._cablereelidTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1249,15 +1047,6 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._cablereelidTableAdapter != null)) {
-                    revertConnections.Add(this._cablereelidTableAdapter, this._cablereelidTableAdapter.Connection);
-                    this._cablereelidTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._cablereelidTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._cablereelidTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._cablereelidTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._cablereelidTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1315,10 +1104,6 @@ SELECT CableReelID, TransactionDate, PartID, EmployeeID, AssignedCableReelID FRO
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._cablereelidTableAdapter != null)) {
-                    this._cablereelidTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cablereelidTableAdapter]));
-                    this._cablereelidTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
