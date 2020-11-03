@@ -26,6 +26,7 @@
               <Mapping SourceColumn="TransactionDate" DataSetColumn="TransactionDate" />
               <Mapping SourceColumn="PartID" DataSetColumn="PartID" />
               <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
+              <Mapping SourceColumn="AssignedCableReelID" DataSetColumn="AssignedCableReelID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -44,6 +45,13 @@
               <xs:element name="TransactionDate" msprop:Generator_ColumnVarNameInTable="columnTransactionDate" msprop:Generator_ColumnPropNameInRow="TransactionDate" msprop:Generator_ColumnPropNameInTable="TransactionDateColumn" msprop:Generator_UserColumnName="TransactionDate" type="xs:dateTime" />
               <xs:element name="PartID" msprop:Generator_ColumnVarNameInTable="columnPartID" msprop:Generator_ColumnPropNameInRow="PartID" msprop:Generator_ColumnPropNameInTable="PartIDColumn" msprop:Generator_UserColumnName="PartID" type="xs:int" />
               <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
+              <xs:element name="AssignedCableReelID" msprop:Generator_ColumnVarNameInTable="columnAssignedCableReelID" msprop:Generator_ColumnPropNameInRow="AssignedCableReelID" msprop:Generator_ColumnPropNameInTable="AssignedCableReelIDColumn" msprop:Generator_UserColumnName="AssignedCableReelID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -287,6 +287,8 @@ namespace CableInventoryDLL {
             
             private global::System.Data.DataColumn columnEmployeeID;
             
+            private global::System.Data.DataColumn columnAssignedCableReelID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindCableReelIDByTransactionDateDataTable() {
@@ -354,6 +356,14 @@ namespace CableInventoryDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AssignedCableReelIDColumn {
+                get {
+                    return this.columnAssignedCableReelID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -389,13 +399,14 @@ namespace CableInventoryDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindCableReelIDByTransactionDateRow AddFindCableReelIDByTransactionDateRow(System.DateTime TransactionDate, int PartID, int EmployeeID) {
+            public FindCableReelIDByTransactionDateRow AddFindCableReelIDByTransactionDateRow(System.DateTime TransactionDate, int PartID, int EmployeeID, string AssignedCableReelID) {
                 FindCableReelIDByTransactionDateRow rowFindCableReelIDByTransactionDateRow = ((FindCableReelIDByTransactionDateRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TransactionDate,
                         PartID,
-                        EmployeeID};
+                        EmployeeID,
+                        AssignedCableReelID};
                 rowFindCableReelIDByTransactionDateRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindCableReelIDByTransactionDateRow);
                 return rowFindCableReelIDByTransactionDateRow;
@@ -429,6 +440,7 @@ namespace CableInventoryDLL {
                 this.columnTransactionDate = base.Columns["TransactionDate"];
                 this.columnPartID = base.Columns["PartID"];
                 this.columnEmployeeID = base.Columns["EmployeeID"];
+                this.columnAssignedCableReelID = base.Columns["AssignedCableReelID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -442,6 +454,8 @@ namespace CableInventoryDLL {
                 base.Columns.Add(this.columnPartID);
                 this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeID);
+                this.columnAssignedCableReelID = new global::System.Data.DataColumn("AssignedCableReelID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAssignedCableReelID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCableReelID}, true));
                 this.columnCableReelID.AutoIncrement = true;
@@ -451,6 +465,8 @@ namespace CableInventoryDLL {
                 this.columnTransactionDate.AllowDBNull = false;
                 this.columnPartID.AllowDBNull = false;
                 this.columnEmployeeID.AllowDBNull = false;
+                this.columnAssignedCableReelID.AllowDBNull = false;
+                this.columnAssignedCableReelID.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -634,6 +650,17 @@ namespace CableInventoryDLL {
                     this[this.tableFindCableReelIDByTransactionDate.EmployeeIDColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string AssignedCableReelID {
+                get {
+                    return ((string)(this[this.tableFindCableReelIDByTransactionDate.AssignedCableReelIDColumn]));
+                }
+                set {
+                    this[this.tableFindCableReelIDByTransactionDate.AssignedCableReelIDColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -799,6 +826,7 @@ namespace CableInventoryDLL.FindCableReelIDByTransactionDateDataSetTableAdapters
             tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
             tableMapping.ColumnMappings.Add("PartID", "PartID");
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
+            tableMapping.ColumnMappings.Add("AssignedCableReelID", "AssignedCableReelID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

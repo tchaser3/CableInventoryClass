@@ -464,7 +464,7 @@ namespace CableInventoryDLL {
                 this.columnTransactionID.Unique = true;
                 this.columnPartID.AllowDBNull = false;
                 this.columnPartDescription.AllowDBNull = false;
-                this.columnPartDescription.MaxLength = 1;
+                this.columnPartDescription.MaxLength = 2147483647;
                 this.columnReelID.AllowDBNull = false;
                 this.columnReelID.MaxLength = 2147483647;
                 this.columnReelFootage.AllowDBNull = false;
