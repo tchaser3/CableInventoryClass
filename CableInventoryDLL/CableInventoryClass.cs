@@ -500,7 +500,7 @@ namespace CableInventoryDLL
         }
         public bool InsertCableReelInventory(int intPartID, int intWarehouseID, string strReelID, int intReelFootage)
         {
-            bool blnFatalError = true;
+            bool blnFatalError = false;
 
             try
             {
